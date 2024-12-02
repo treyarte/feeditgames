@@ -1,0 +1,12 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 40;
+}
+    .header a {
+        text-decoration: none;
+    }
+
+
+

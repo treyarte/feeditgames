@@ -1,3 +1,15 @@
+# Feed It Games
+
+**Feed It Games** is a news aggregator for staying updated with the latest gaming news. The is aggregates articles from popular gaming websites into a personalized feed, allowing users to customize their experience by selecting their preferred sources and tags.
+
+The tech used in this project:
+
+- **Frontend**: Next.js with TypeScript
+- **Database**: MongoDB hosted on Atlas
+- **Backend Services**: C# .NET Azure Functions that handle the automated retrieval and storage of gaming articles.
+
+This is a hobby project inspired by Daily.dev.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

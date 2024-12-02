@@ -1,13 +1,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --main-font-color: #fff;
+  --nav-height: 80px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  overflow: hidden;
 }
 
 html,
@@ -19,9 +18,23 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  padding: 0 7rem;
+  height: calc(100vh - var(--nav-height));  
+  margin-top: calc(80px + 5rem);
+}
+
+a {
+    color: var(--main-font-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 * {
@@ -30,13 +43,52 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.display-desktop,
+.display-tablet {
+    display: none;
+}
+
+.display-mobile {
+
+}
+
+@media (min-width: 891px) { 
+    .display-mobile,
+    .display-desktop{
+      display: none;
+    }
+    .display-tablet {
+      display: initial;
+    }
+}
+
+@media (min-width: 1280px) { 
+  .display-mobile,
+  .display-tablet{
+    display: none;
+  }
+  .display-desktop {
+    display: initial;
+  }
+  
+
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
   html {
     color-scheme: dark;
+  }
+
+  body {
+    color: white !important;
+  }
+
+  a {
+    
   }
 }
